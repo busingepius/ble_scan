@@ -1,0 +1,21 @@
+{
+    "name": "ble-scan",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dart-code.dart-code",
+                "ms-azuretools.vscode-docker",
+                "dart-code.flutter",
+                "streetsidesoftware.code-spell-check"
+            ]
+        }
+    }
+}

@@ -1,0 +1,32 @@
+name: ble-scan
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull-request:
+    branches:
+      - main
+      - master
+
+jobs:
+  ble-scan
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Set flutter
+      uses: subosito/flutter-actions@v2
+      with:
+        flutter-version: "3.24.3"
+    - name: Change directory
+      working-directory: ./blescan
+      run: echo "Changed working directory to my flutter app directory"
+
+    - name: Install dependencies
+      working-directory: ./blescan
+      run: flutter pub get
+    - name: Run flutter tests
+      working-directory: ./blescan
+      run: flutter test
