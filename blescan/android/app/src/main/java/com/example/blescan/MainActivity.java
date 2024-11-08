@@ -1,5 +1,7 @@
 package com.example.blescan;
 
+WORKS WELL TOOO (CODE BELOW IS OK)
+
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -141,6 +143,7 @@ public class MainActivity extends FlutterActivity {
         public void onScanResult(int callbackType, ScanResult result) {
             BluetoothDevice device = result.getDevice();
             String deviceInfo = device.getName() + " - " + device.getAddress();
+            System.out.println(deviceInfo);
             if (!scanResults.contains(deviceInfo)) {
                 scanResults.add(deviceInfo);
             }

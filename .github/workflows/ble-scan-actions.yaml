@@ -10,7 +10,7 @@ on:
       - master
 
 jobs:
-  ble-scan
+  ble-scan-actions
     runs-on: ubuntu-latest
 
   steps:
